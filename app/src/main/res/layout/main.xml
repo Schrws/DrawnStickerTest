@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"  tools:context=".Main">
+    <Button
+        android:id="@+id/but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/but"
+        android:layout_centerInParent="true">
+        <test.drawnstickertest.SignaturePad
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:id="@+id/mainImage"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/maintab"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true">
+        <Button
+            android:id="@+id/linebtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+        <Button
+            android:id="@+id/erasebtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+        <Button
+            android:id="@+id/clearbtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linetab"
+        android:layout_toLeftOf="@+id/maintab"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+        <Button
+            android:id="@+id/linecolorbtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+        <Button
+            android:id="@+id/linewidthbtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linecolorgridview"
+        android:layout_toLeftOf="@+id/linetab"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+        <GridView
+            android:id="@+id/linecolorgrid"
+            android:visibility="gone"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:numColumns="auto_fit"
+            android:verticalSpacing="4dp"
+            android:horizontalSpacing="4dp"
+            android:columnWidth="42dp"
+            android:stretchMode="spacingWidthUniform">
+
+        </GridView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linewidthview"
+        android:layout_toLeftOf="@+id/linetab"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+        <Button
+            android:id="@+id/linewidth1"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+        <Button
+            android:id="@+id/linewidth2"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+        <Button
+            android:id="@+id/linewidth3"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+        <Button
+            android:id="@+id/linewidth4"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+    </LinearLayout>
+
+</RelativeLayout>
