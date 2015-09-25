@@ -13,15 +13,16 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SignaturePad extends View {
-    //View state
+/**
+ * Created by Schrws on 2015-07-23.
+ */
+public class DrawPad extends View {
     private List<TimedPoint> mPoints;
     private boolean mIsEmpty;
     private float mLastTouchX;
@@ -30,7 +31,6 @@ public class SignaturePad extends View {
     private float mLastWidth;
     private RectF mDirtyRect;
 
-    //Configurable parameters
     public float mMinWidth;
     private float mMaxWidth;
     private float mVelocityFilterWeight;
@@ -41,7 +41,7 @@ public class SignaturePad extends View {
     private Bitmap mSignatureBitmap = null;
     private Canvas mSignatureBitmapCanvas = null;
 
-    public SignaturePad(Context context, AttributeSet attrs) {
+    public DrawPad(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         TypedArray a = context.getTheme().obtainStyledAttributes(
@@ -59,17 +59,13 @@ public class SignaturePad extends View {
             a.recycle();
         }
 
-        //Fixed parameters
         mPaint.setAntiAlias(true);
+        mPaint.setDither(true);
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeCap(Paint.Cap.ROUND);
         mPaint.setStrokeJoin(Paint.Join.ROUND);
 
-        mPaint.setDither(true);
-
-        //Dirty rectangle to update only the changed portion of the view
         mDirtyRect = new RectF();
-
         clear();
     }
 
@@ -92,6 +88,11 @@ public class SignaturePad extends View {
         }
     }
 
+    /**
+     * Set the mode from given value.
+     *
+     * @param isEraseMode the mode.
+     */
     public void setEraseMode(boolean isEraseMode) {
         if (isEraseMode) {
             mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
@@ -149,7 +150,6 @@ public class SignaturePad extends View {
         }
 
         setIsEmpty(true);
-
         invalidate();
     }
 
