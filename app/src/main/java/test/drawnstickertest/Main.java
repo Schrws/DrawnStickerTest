@@ -20,7 +20,7 @@ import android.widget.LinearLayout;
  */
 public class Main extends AppCompatActivity implements View.OnClickListener{
     DrawPad eiv;
-    LinearLayout mLineTab, linewidthView;
+    LinearLayout mLineTab, linewidthView, linebtnbackground, erasebtnbackground;
     GridView linecolorgrid;
     Button linebtn, linecolorbtn, linewidthbtn, linewidth1, linewidth2, linewidth3, linewidth4, clearbtn, erasebtn;
     boolean linebtnchk = false, linecolorbtnchk = false, linewidthbtnchk = false;
@@ -47,6 +47,9 @@ public class Main extends AppCompatActivity implements View.OnClickListener{
                 eiv.setMinWidth(3f);
                 eiv.setMaxWidth(7f);
             }
+            linebtn.setBackgroundResource(R.drawable.penselected);
+            linebtnbackground.setBackgroundColor(Color.parseColor(ColorIds[position]));
+            erasebtnbackground.setBackgroundColor(Color.parseColor("#ffffffff"));
         }
     };
 
@@ -94,6 +97,8 @@ public class Main extends AppCompatActivity implements View.OnClickListener{
                 modifyPenWidth(6f);
                 break;
             case R.id.erasebtn:
+                linebtn.setBackgroundResource(R.drawable.pen);
+                erasebtnbackground.setBackgroundColor(Color.parseColor("#ff865239"));
                 eiv.setEraseMode(true);
                 break;
             case R.id.clearbtn: eiv.clear();
@@ -102,6 +107,8 @@ public class Main extends AppCompatActivity implements View.OnClickListener{
     }
 
     public void initialSet() {
+        linebtnbackground = (LinearLayout) findViewById(R.id.linebtnbackground);
+        erasebtnbackground = (LinearLayout) findViewById(R.id.erasebtnbackground);
         linecolorgrid = (GridView) findViewById(R.id.linecolorgrid);
         linecolorgrid.setAdapter(new ColorAdapter(this));
         linecolorgrid.setOnItemClickListener(colorOnItemClickListener);
