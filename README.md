@@ -2,7 +2,8 @@
 DrawnStickerTest is a simple Test which is used in [EnhancedScreenshot](http://play.google.com).
 
 ## Used Library
-* s
+ * [SignaturePad](https://github.com/gcacace/android-signaturepad)
+ * [android-crop](https://github.com/jdamcd/android-crop)
 
 ## License
 
