@@ -1,5 +1,5 @@
 # DrawnStickerTest
-DrawnStickerTest
+DrawnStickerTest is a simple Test which is used in [EnhancedScreenshot](http://play.google.com).
 
 ## License
 
