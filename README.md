@@ -1,6 +1,9 @@
 # DrawnStickerTest
 DrawnStickerTest is a simple Test which is used in [EnhancedScreenshot](http://play.google.com).
 
+## Used Library
+* s
+
 ## License
 
     Copyright 2015 Schrws
