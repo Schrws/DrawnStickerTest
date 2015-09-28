@@ -1,5 +1,9 @@
 # DrawnStickerTest
-DrawnStickerTest is a simple Test which is used in [EnhancedScreenshot](http://play.google.com).
+ DrawnStickerTest is a simple Test which is used in [EnhancedScreenshot](http://play.google.com).
+
+## Features
+ * Draw Lines with Various Colors & Stroke Widths.
+ * Erase & Clear.
 
 ## License
  Based on [android-signaturepad](https://github.com/gcacace/android-signaturepad) & [android-crop](https://github.com/jdamcd/android-crop).
