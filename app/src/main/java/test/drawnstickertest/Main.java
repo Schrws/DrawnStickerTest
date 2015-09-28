@@ -25,7 +25,9 @@ public class Main extends AppCompatActivity implements View.OnClickListener{
     Button linebtn, linecolorbtn, linewidthbtn, linewidth1, linewidth2, linewidth3, linewidth4, clearbtn, erasebtn;
     boolean linebtnchk = false, linecolorbtnchk = false, linewidthbtnchk = false;
     LayoutInflater inflater;
-    private String[] ColorIds = {"#ffffffff", "#ff000000", "#fffffff3", "#ff000005", "#fff3f4f4", "#ff00ee01", "#fffaaff7", "#ff0aa008", "#ffffffff", "#ff000000", "#fffffff3", "#ff000005", "#fff3f4f4", "#ff00ee01", "#fffaaff7"};
+    private String[] ColorIds = {"#ffff0000", "#ffff5e00", "#ffffbb00", "#ff1ddb16", "#ff0100ff", "#ff000000", "#fff15f5f", "#fff29661", "#fff2cb61", "#ff86e57f", "#ff6b66ff", "#ffffffff",
+            "#ffcc3d3d", "#ffcc723d", "#ffcca63d", "#ff47c83e", "#ff4641d9", "#ff8c8c8c", "#ff980000", "#ff993800", "#ff997000", "#ff2f9d27", "#ff050099", "#ff5d5d5d",
+            "#ff670000", "#ff662500", "#ff664b00", "#ff22741c", "#ff030066", "#ff353535"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

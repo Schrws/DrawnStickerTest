@@ -53,6 +53,7 @@
     <LinearLayout
         android:id="@+id/linetab"
         android:layout_toLeftOf="@+id/maintab"
+        android:layout_alignTop="@+id/maintab"
         android:background="#ffffffff"
         android:visibility="gone"
         android:orientation="vertical"
@@ -74,6 +75,8 @@
     <LinearLayout
         android:id="@+id/linecolorgridview"
         android:layout_toLeftOf="@+id/linetab"
+        android:layout_alignTop="@+id/maintab"
+        android:background="#ffffffff"
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -81,12 +84,12 @@
         <GridView
             android:id="@+id/linecolorgrid"
             android:visibility="gone"
-            android:layout_width="180dp"
+            android:layout_width="236dp"
             android:layout_height="wrap_content"
             android:numColumns="auto_fit"
             android:verticalSpacing="4dp"
             android:horizontalSpacing="4dp"
-            android:columnWidth="42dp"
+            android:columnWidth="36dp"
             android:stretchMode="spacingWidthUniform">
         </GridView>
     </LinearLayout>
@@ -94,6 +97,7 @@
     <LinearLayout
         android:id="@+id/linewidthview"
         android:layout_toLeftOf="@+id/linetab"
+        android:layout_alignTop="@+id/maintab"
         android:visibility="gone"
         android:orientation="vertical"
         android:layout_width="wrap_content"
