@@ -84,7 +84,7 @@
         <GridView
             android:id="@+id/linecolorgrid"
             android:visibility="gone"
-            android:layout_width="236dp"
+            android:layout_width="240dp"
             android:layout_height="wrap_content"
             android:numColumns="auto_fit"
             android:verticalSpacing="4dp"

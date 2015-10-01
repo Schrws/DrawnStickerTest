@@ -51,7 +51,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener{
             }
             linebtn.setBackgroundResource(R.drawable.penselected);
             linebtnbackground.setBackgroundColor(Color.parseColor(ColorIds[position]));
-            erasebtnbackground.setBackgroundColor(Color.parseColor("#ffffffff"));
+            erasebtnbackground.setBackgroundColor(Color.WHITE);
         }
     };
 
@@ -161,11 +161,8 @@ public class Main extends AppCompatActivity implements View.OnClickListener{
         public View getView(int position, View convertView, ViewGroup parent) {
 
             ImageView imageView;
-            if (convertView == null) {
-                imageView = new ColorItem(mContext);
-                imageView.setMinimumWidth(48);
-                imageView.setMinimumHeight(48);
-            } else imageView = (ImageView) convertView;
+            if (convertView == null) imageView = new ColorItem(mContext);
+             else imageView = (ImageView) convertView;
 
             imageView.setBackgroundColor(Color.parseColor(ColorIds[position]));
             return imageView;
