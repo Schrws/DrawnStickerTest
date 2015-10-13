@@ -6,7 +6,7 @@
  * Erase & Clear.
 
 ## License
- Based on [android-signaturepad](https://github.com/gcacace/android-signaturepad) & [android-crop](https://github.com/jdamcd/android-crop).
+ Based on [android-signaturepad](https://github.com/gcacace/android-signaturepad).
 
     Copyright 2015 Schrws
 
